@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorRed"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/skb_Progress"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:max="100"
+        android:layout_above="@+id/lin_bottombar">
+    </SeekBar>
+
+    <LinearLayout
+        android:id="@+id/lin_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingTop="3dp"
+        android:paddingLeft="6dp"
+        android:paddingBottom="6dp"
+        android:background="#fafafa"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/lin_detailed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_pic_small"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:id="@+id/tv_songname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:singleLine="true"
+                    />
+                <TextView
+                    android:id="@+id/tv_singername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ib_play"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/ic_play"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="18dp" />
+                <ImageView
+                    android:id="@+id/ib_download"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/ic_download1"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
